@@ -1,28 +1,16 @@
-var axios = require("axios").default;
+var axios = require("axios");
 import {useState} from 'react';
 
 
 //const [news, setNews] = useState([]);
 
-var options = {
-  method: 'GET',
-  url: 'https://coingecko.p.rapidapi.com/status_updates',
-  headers: {
-    'x-rapidapi-host': 'coingecko.p.rapidapi.com',
-    'x-rapidapi-key': '885be0c09dmsh102382e6ecb5b89p1e0f15jsna76311eec7f5'
-  }
-};
-
-const NewsMetaData = async() => { 
-    await axios.request(options).then(function (res) {
-        //setNews = (res.data.status_updates);
-        //console.log(News);
-        //return NewsFeeds;
-    }).catch(function (error) {
-        console.error(error);
-        return (null);
-    });
-};
+const NewsMetaData = () => {
+    axios.get(
+    'https://api.coingecko.com/api/v3/status_updates?category=general&per_page=20'
+    ).then(res => {
+    return res.status_updates
+    }).catch(err => console.log(err));
+}
 
     // console.log(NewsMetaData)//.status_updates);
     // console.log(NewsMetaData);

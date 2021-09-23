@@ -32,12 +32,13 @@ const Home = () => {
                     <View style={{paddingTop:50,paddingHorizontal:20}}>
                         <HomeTopMovers/>
                     </View>
-                    <View style={{paddingTop:50,paddingHorizontal:20, marginBottom: 7}}>
+                    <View style={{paddingTop:50,paddingHorizontal:20, marginBottom: 30}}>
                         <HomeRewards/>
                     </View>
-                    {/* <View style={{paddingTop:50,paddingHorizontal:20, marginBottom: 17}}>
-                        <HomeNews/>
-                    </View> */}
+                    <View style={{paddingTop:50,paddingHorizontal:20, marginBottom: 17}}>
+                      <HomeNews/>
+                    </View>
+                      
                 </View>
             </ScrollView>
         </SafeAreaView>
